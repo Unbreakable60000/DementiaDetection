@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<html>
-  <head>
-    <title>Dementia Detection</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body> 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dementia Detection</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body> 
   <header>
     <h1>Dementia Detection</h1>
   </header>
 
   <main>
     <div class="container" id="inputContainer">
-    <h2 id="question"></h2>
-    <input type="text" id="answer">
-    <select id="answerSelect"></select>
-    <div id="error-message"></div>
-    <button id="prevBtn">Previous Question</button>
-    <button id="nextBtn">Next Question</button>
-    <button id="restartBtn">Restart Form</button>
+      <h2 id="question"></h2>
+      <input type="text" id="answer">
+      <select id="answerSelect"></select>
+      <div id="error-message" style="color:red; margin-top:5px;"></div>
+      <button id="prevBtn">Previous Question</button>
+      <button id="nextBtn">Next Question</button>
+      <button id="restartBtn" style="display:none;">Restart Form</button>
+      <button id="resultsBtn" style="display:none;">Get Results</button>
     </div>
   </main>
 
@@ -26,5 +28,5 @@
     <p>© 2026 Dementia Detection. All rights reserved.</p>
   </footer>
   <script src="userInputs.js"></script>
-  </body>
+</body>
 </html>

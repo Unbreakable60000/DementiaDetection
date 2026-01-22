@@ -29,6 +29,10 @@ footer {
   background-color: #6e9cca;
   color: black;
   font-size: 0.9em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
 main {
@@ -73,7 +77,7 @@ p {
   margin-top: 10px;
   padding: 10px;
   width: 100%;
-  font-size: 16px;              /* prevents mobile zoom */
+  font-size: 16px;
   border-radius: 5px;
   border: 1px solid #ccc;
 }
@@ -101,4 +105,51 @@ p {
     padding: 15px;
     border-radius: 0;
   }
+}
+
+#tableWrapper {
+  overflow-x: auto;
+  width: 100%;
+  margin-top: 20px;
+}
+
+table {
+  border-collapse: collapse;
+  width: max-content;
+}
+
+th, td {
+  border: 1px solid #333;
+  padding: 8px 12px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+#restartBtnResults {
+  padding: 8px 16px;
+  background-color: #003366;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#restartBtnResults:hover {
+  background-color: #002244;
+}
+
+/* Prevent mobile zoom on inputs */
+input, select, button, textarea {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+/* Optional: make inputs more mobile-friendly */
+input, select, button {
+  touch-action: manipulation; /* better tap responsiveness */
 }
