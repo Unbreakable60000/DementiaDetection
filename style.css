@@ -1,69 +1,70 @@
-/* Global reset for consistency */
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
-/* Body layout */
 body {
+  margin: 0;
+  min-height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
   color: black;
   background-color: white;
+  text-align: center;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  text-align: center;
 }
 
-/* Header */
 header {
-  background-color: #f2f2f2;
-  padding: 20px;
-  width: 100%;
+  padding: 15px;
+  background-color: #6e9cca;
+  color: white;
 }
 
-/* Main content centered */
-main {
-  flex: 1; /* fill space between header and footer */
-  display: flex;
-  justify-content: center; /* horizontal center */
-  align-items: center;     /* vertical center */
-  padding: 20px;
-  width: 100%;
-  padding-bottom: 40px; /* prevent content from being hidden behind footer */
+header h1 {
+  margin: 0;
+  font-size: 1.8em;
 }
 
-/* Footer fixed at bottom */
 footer {
-  background-color: #f2f2f2;
-  color: black;
   padding: 10px;
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  left: 0;
+  background-color: #6e9cca;
+  color: black;
+  font-size: 0.9em;
 }
 
-/* Prevent text overflow */
-h1{
-  max-width: 100%;
-  word-wrap: break-word;
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  overflow: hidden;
+  padding: 10px;
 }
-p {
-  max-width: 100%;
-  word-wrap: break-word;
-}
-/* Central container / card for inputs from user */
+
 .container {
   background-color: white;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 10px black;
-  max-width: 400px;
   width: 90%;
+  max-width: 600px;
+  height: 100%;
+  margin: 0;
   text-align: center;
-  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto;
+}
+
+h1 {
+  color: Black;
+  margin-top: 0;
+}
+
+p {
+  color: black;
+  margin: 10px 0;
+  line-height: 1.5;
 }
 
 .container input,
@@ -72,7 +73,7 @@ p {
   margin-top: 10px;
   padding: 10px;
   width: 100%;
-  font-size: 1em;
+  font-size: 16px;              /* prevents mobile zoom */
   border-radius: 5px;
   border: 1px solid #ccc;
 }
@@ -88,8 +89,16 @@ p {
   background-color: #002244;
 }
 
-#error-message {  /* errors are in red */
+#error-message {
   color: red;
-  height: 20px;
+  min-height: 20px;
   margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+    padding: 15px;
+    border-radius: 0;
+  }
 }

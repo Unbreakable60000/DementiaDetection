@@ -30,7 +30,6 @@ function showQuestion() {
     questionEl.textContent = q.text;
 
     if (q.options) {
-      // Populate select options instead of replacing element
       select.innerHTML = `<option value="">Select...</option>`;
       q.options.forEach(opt => {
         const selected = answers[currentQuestion] === opt ? "selected" : "";
@@ -79,7 +78,6 @@ function nextQuestion() {
     const q = questions[currentQuestion];
 
     if (q.options) {
-      // Properly checking placeholder by selectedIndex
       if (select.selectedIndex === 0) {
         errorMsg.textContent = "Please choose an answer from above.";
         return;
