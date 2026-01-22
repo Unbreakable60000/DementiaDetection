@@ -1,14 +1,95 @@
-/* css style sheet for website */
+/* Global reset for consistency */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body layout */
 body {
   font-family: Arial, Helvetica, sans-serif;
-  /* Using sans-serif for clear viewing - this is inheritted throughout*/
-  color:black;
+  color: black;
   background-color: white;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   text-align: center;
 }
-h1 {
-   color:#003366; /* dark-Blue */
+
+/* Header */
+header {
+  background-color: #f2f2f2;
+  padding: 20px;
+  width: 100%;
+}
+
+/* Main content centered */
+main {
+  flex: 1; /* fill space between header and footer */
+  display: flex;
+  justify-content: center; /* horizontal center */
+  align-items: center;     /* vertical center */
+  padding: 20px;
+  width: 100%;
+  padding-bottom: 40px; /* prevent content from being hidden behind footer */
+}
+
+/* Footer fixed at bottom */
+footer {
+  background-color: #f2f2f2;
+  color: black;
+  padding: 10px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+/* Prevent text overflow */
+h1{
+  max-width: 100%;
+  word-wrap: break-word;
 }
 p {
-  color:black;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+/* Central container / card for inputs from user */
+.container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px black;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  margin: 50px auto;
+}
+
+.container input,
+.container select,
+.container button {
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.container button {
+  background-color: #003366;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.container button:hover {
+  background-color: #002244;
+}
+
+#error-message {  /* errors are in red */
+  color: red;
+  height: 20px;
+  margin-top: 10px;
 }
